@@ -25,3 +25,7 @@ yarn-error.log*
 .idea
 *.swp
 *.swo
+
+# firebase
+.firebase/
+firebase-debug.log
