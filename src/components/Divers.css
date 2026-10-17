@@ -1,0 +1,546 @@
+@import '../styles/colors.css';
+
+/* ─── HERO LAYOUT ─────────────────────────────────────────────── */
+
+.divers-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.divers-image {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divers-image-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+                      linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-composite: intersect;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+              linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-composite: intersect;
+}
+
+.divers-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+}
+
+.divers-grid-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(var(--color-grid-pattern) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-pattern) 1px, transparent 1px);
+  background-size: 30px 30px;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  opacity: 0.3;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+                      linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-composite: intersect;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+              linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-composite: intersect;
+}
+
+.divers-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.divers-content h2 {
+  margin-bottom: 0.25rem;
+}
+
+.divers-banners {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ─── PASSE-TEMPS SHEET ───────────────────────────────────────── */
+
+.passtemps-sheet {
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hobby-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--color-border-medium);
+  background-color: var(--color-bg-secondary);
+  font-family: 'Noto Sans Mono', monospace;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  width: 100%;
+}
+
+.hobby-card:hover {
+  border-color: var(--color-border-light);
+  background-color: rgba(34, 34, 34, 0.95);
+}
+
+.hobby-card-image {
+  height: 15rem;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 2px solid var(--color-border-medium);
+  background-color: var(--color-bg-primary);
+}
+
+.hobby-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hobby-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hobby-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.hobby-card-summary {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ─── HOBBY DETAIL SHEET ──────────────────────────────────────── */
+
+.hobby-sheet {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.hobby-sheet-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent),
+                      linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-composite: intersect;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent),
+              linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+  mask-composite: intersect;
+}
+
+.hobby-sheet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+}
+
+.hobby-sheet-grid-pattern {
+  position: absolute;
+  inset: -40px;
+  background-image:
+    linear-gradient(var(--color-grid-pattern) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-pattern) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.25;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+                      linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-composite: intersect;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+              linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-composite: intersect;
+}
+
+.hobby-sheet-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hobby-sheet-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border-medium);
+}
+
+.hobby-sheet-description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* ─── INTÉRÊTS SHEET ──────────────────────────────────────────── */
+
+.interets-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.interest-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.interest-carousel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--color-border-medium);
+  padding-bottom: 0.5rem;
+}
+
+.interest-carousel-icon {
+  font-size: 1.1rem;
+}
+
+.interest-carousel-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.interest-scroll {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 0.5rem;
+  align-items: flex-start;
+}
+
+.interest-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.interest-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.interest-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-medium);
+}
+
+.interest-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-border-light);
+}
+
+.interest-card {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.interest-card--featured {
+  width: 450px;
+}
+
+.interest-card--featured .interest-card-image {
+  height: 250px;
+  border: 2px solid var(--color-border-medium);
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+  transition: border-color 0.2s ease;
+}
+
+.interest-card--featured:hover .interest-card-image {
+  border-color: var(--color-border-light);
+}
+
+.interest-card--vertical {
+  width: 180px;
+}
+
+.interest-card--vertical .interest-card-image {
+  height: 250px;
+  border: 2px solid var(--color-border-medium);
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+  transition: border-color 0.2s ease;
+}
+
+.interest-card--vertical:hover .interest-card-image {
+  border-color: var(--color-border-light);
+}
+
+.interest-card-image {
+  position: relative;
+  width: 100%;
+}
+
+.interest-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.interest-card:hover .interest-card-image img {
+  transform: scale(1.04);
+}
+
+.interest-card:hover {
+  opacity: 1;
+}
+
+
+.interest-card-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.interest-card-badge {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-medium);
+  font-family: 'Noto Sans Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+.interest-card-name {
+  font-family: 'Noto Sans Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* ─── INTEREST DETAIL SHEET ───────────────────────────────────── */
+
+.interest-sheet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  font-family: 'Noto Sans Mono', monospace;
+  align-items: start;
+}
+
+.interest-sheet-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.interest-sheet-gif-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent),
+                      linear-gradient(to bottom, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-composite: intersect;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent),
+              linear-gradient(to bottom, transparent, black 8%, black 92%, transparent);
+  mask-composite: intersect;
+}
+
+.interest-sheet-gif {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.interest-sheet-grid-pattern {
+  position: absolute;
+  inset: -40px;
+  background-image:
+    linear-gradient(var(--color-grid-pattern) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-pattern) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.25;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+                      linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-composite: intersect;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+              linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-composite: intersect;
+}
+
+.interest-sheet-category {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-medium);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.interest-sheet-favorite {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-medium);
+  font-size: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.interest-sheet-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.interest-sheet-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border-medium);
+}
+
+.interest-sheet-description {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .divers-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .divers-image {
+    height: 350px;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-sheet {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-sheet-gif-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 768px) {
+  .divers-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .divers-image {
+    order: 2;
+    height: 280px;
+  }
+
+  .divers-content {
+    order: 1;
+    width: 100%;
+  }
+
+  .divers-grid-pattern {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .hobby-card {
+    flex-direction: column;
+  }
+
+  .hobby-card-image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .interest-card--featured {
+    width: 220px;
+  }
+
+  .interest-card--featured .interest-card-image {
+    height: 138px;
+  }
+
+  .interest-card--vertical {
+    width: 90px;
+  }
+
+  .interest-card--vertical .interest-card-image {
+    height: 130px;
+  }
+
+  .hobby-sheet-image-wrapper {
+    height: 200px;
+  }
+
+  .interest-sheet {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .interest-sheet-gif-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+}

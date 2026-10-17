@@ -1,0 +1,71 @@
+@import '../../styles/colors.css';
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-family: 'Noto Sans Mono', monospace;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+/* Variants */
+.btn-primary {
+  background-color: var(--color-btn-bg);
+  color: var(--color-text-primary);
+  border-color: var(--color-btn-border);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-btn-bg-hover);
+  border-color: var(--color-btn-border-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-border-medium);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border-light);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border-color: transparent;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  color: var(--color-text-secondary);
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.btn-md {
+  padding: 0.75rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* Disabled state */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

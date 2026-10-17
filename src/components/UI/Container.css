@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Sizes */
+.container-sm {
+  max-width: 640px;
+}
+
+.container-md {
+  max-width: 960px;
+}
+
+.container-lg {
+  max-width: 1400px;
+}
+
+.container-xl {
+  max-width: 1920px;
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}

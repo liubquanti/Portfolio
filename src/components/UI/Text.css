@@ -1,0 +1,51 @@
+@import '../../styles/colors.css';
+
+.text {
+  font-family: 'Noto Sans Mono', monospace;
+  margin: 0;
+}
+
+/* Variants */
+.text-body {
+  font-weight: 400;
+}
+
+.text-subtitle {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.text-caption {
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+/* Sizes */
+.text-sm {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.text-md {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.text-lg {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Colors */
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-tertiary {
+  color: var(--color-text-tertiary);
+}

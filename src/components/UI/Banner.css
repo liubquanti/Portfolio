@@ -1,0 +1,70 @@
+@import '../../styles/colors.css';
+
+.banner {
+  width: 100%;
+  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--color-bg-secondary);
+  border: 2px solid var(--color-border-medium);
+  color: var(--color-text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.banner:hover {
+  border-color: var(--color-border-light);
+  background-color: rgba(34, 34, 34, 0.95);
+}
+
+.banner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.banner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--color-text-primary);
+}
+
+.banner-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  font: inherit;
+}
+
+.banner-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text-primary);
+  font-family: inherit;
+}
+
+.banner-subtitle {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  font-family: inherit;
+}

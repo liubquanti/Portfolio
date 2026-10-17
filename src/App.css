@@ -1,0 +1,35 @@
+@import './styles/colors.css';
+
+html {
+  scroll-padding-top: 0px;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+/* Scrollbar styling */
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-medium);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-border-light);
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+}
+
+::selection {
+    color: var(--color-bg-primary);
+    background: var(--color-text-primary);
+}

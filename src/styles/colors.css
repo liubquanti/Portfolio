@@ -1,0 +1,35 @@
+/* ========================================
+   COLOR PALETTE - Система кольорів
+   ======================================== */
+
+:root {
+  /* Primary Background */
+  --color-bg-primary: #0f0f0f;
+  --color-bg-secondary: #1a1a1a;
+  
+  /* Text Colors */
+  --color-text-primary: #e8e8e8;
+  --color-text-secondary: #b3b3b3;
+  --color-text-tertiary: #999999;
+  
+  /* Border & Accent */
+  --color-border-dark: #2a2a2a;
+  --color-border-medium: #666666;
+  --color-border-light: #888888;
+  
+  /* Button Colors */
+  --color-btn-bg: #333333;
+  --color-btn-bg-hover: #444444;
+  --color-btn-border: #555555;
+  --color-btn-border-hover: #777777;
+  
+  /* Geometric Elements */
+  --color-shape-border: #333333;
+  --color-shape-fill: rgba(100, 100, 100, 0.1);
+  --color-shape-fill-accent: rgba(100, 100, 100, 0.15);
+  --color-grid-pattern: rgba(100, 100, 100, 0.5);
+  
+  /* Shadows */
+  --color-shadow-light: rgba(0, 0, 0, 0.5);
+  --color-text-shadow: rgba(100, 100, 100, 0.2);
+}

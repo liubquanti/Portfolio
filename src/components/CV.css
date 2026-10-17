@@ -1,0 +1,199 @@
+@import '../styles/colors.css';
+
+.cv-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* PDF Preview Container */
+.cv-preview-container {
+  width: 100%;
+  height: 600px;
+  border: 2px solid var(--color-border-medium);
+  overflow: hidden;
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-preview {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cv-preview-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cv-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-border-medium);
+  background: linear-gradient(135deg, rgba(51, 51, 51, 0.5), rgba(26, 26, 26, 0.5));
+}
+
+.cv-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-text-secondary);
+}
+
+.cv-placeholder-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.cv-placeholder-text {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.cv-placeholder-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+.cv-preview-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--color-border-medium);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-family: 'Noto Sans Mono', monospace;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.cv-preview-button:hover {
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-border-light);
+  color: var(--color-text-primary);
+}
+
+/* Right side - Content */
+.cv-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cv-content h2 {
+  margin-bottom: 0.5rem;
+}
+
+.cv-content p {
+  line-height: 1.8;
+}
+
+/* Action Buttons */
+.cv-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.cv-actions button {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* CV Info */
+.cv-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cv-info p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cv-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cv-preview-container {
+    height: 400px;
+  }
+
+  .cv-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .cv-preview-container {
+    order: 2;
+  }
+
+  .cv-content {
+    order: 1;
+  }
+
+  .cv-preview-container {
+    height: 300px;
+  }
+
+  .cv-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cv-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cv-placeholder-title {
+    font-size: 1.1rem;
+  }
+
+  .cv-actions {
+    gap: 0.5rem;
+  }
+
+  .cv-actions button {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .cv-preview-button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../styles/colors.css';
+
+.section {
+  width: 100%;
+  scroll-margin-top: 90px;
+}
+
+/* Padding variants */
+.section-p-sm {
+  padding: 2rem 0;
+}
+
+.section-p-md {
+  padding: 3rem 0;
+}
+
+.section-p-lg {
+  padding: 4rem 0;
+}
+
+.section-p-xl {
+  padding: 6rem 0;
+}
+
+.section-p-none {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    scroll-margin-top: 65px;
+  }
+
+  .section-p-lg {
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,274 @@
+@import '../styles/colors.css';
+
+.projets-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.projets-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projets-content h2 {
+  margin-bottom: 0.25rem;
+}
+
+.projets-banners {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projets-image {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projets-image-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+                      linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-composite: intersect;
+
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+              linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-composite: intersect;
+}
+
+.projets-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+}
+
+.projets-grid-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(var(--color-grid-pattern) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-pattern) 1px, transparent 1px);
+  background-size: 30px 30px;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  opacity: 0.3;
+
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+                      linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-composite: intersect;
+
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent),
+              linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-composite: intersect;
+}
+
+@media (max-width: 1024px) {
+  .projets-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projets-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projets-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .projets-image {
+    order: 2;
+  }
+
+  .projets-content {
+    order: 1;
+    width: 100%;
+  }
+
+  .projets-image {
+    height: 280px;
+  }
+
+  .projets-grid-pattern {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.projects-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--color-border-medium);
+  background-color: var(--color-bg-secondary);
+  font-family: 'Noto Sans Mono', monospace;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--color-border-light);
+  background-color: rgba(34, 34, 34, 0.95);
+}
+
+.project-card-image {
+  height: 15rem;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 2px solid var(--color-border-medium);
+  background-color: var(--color-bg-primary);
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.project-card-summary {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-border-medium);
+  background-color: var(--color-bg-primary);
+  font-size: 0.8rem;
+  color: var(--color-text-primary);
+}
+
+.project-tag svg {
+  width: 14px;
+  height: 14px;
+}
+
+.project-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.project-detail-image {
+  border: 2px solid var(--color-border-medium);
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+}
+
+.project-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-detail-heading {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border-bottom: 2px solid var(--color-border-medium);
+  padding-bottom: 0.4rem;
+}
+
+.project-detail-section p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-card-image {
+    width: 100%;
+    height: 160px;
+  }
+}
