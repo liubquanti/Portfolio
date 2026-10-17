@@ -23,7 +23,7 @@ const Hero = () => {
             Oleh Liubchenko
           </Heading>
           <Text variant="body" color="secondary" size="md">
-            Étudiant en 1ère année de BUT Réseaux et Télécommunications.
+            Étudiant en 2ème année de BUT Réseaux et Télécommunications.
           </Text>
           <div className="hero-buttons">
             <Button variant="primary" size="md" onClick={handleContactClick}>
