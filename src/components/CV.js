@@ -69,7 +69,7 @@ function CV() {
                 Format: PDF
               </Text>
               <Text variant="caption" color="tertiary">
-                Mis à jour: Janvier 2026
+                Mis à jour: Octobre 2026
               </Text>
             </div>
           </div>
